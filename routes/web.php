@@ -17,6 +17,4 @@ Route::get('/', function () {
     return 'heLLO WORLD';
 });
 
-Route::get('test/{id}', function ($id) {
-    return 'My ID: '.$id;
-});
+Route::get('test/{id}', 'App\Http\Controllers\MyPlaceController@index');

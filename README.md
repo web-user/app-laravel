@@ -78,5 +78,9 @@ $ docker-compose up -d
 $ docker-compose exec app php artisan key:generate
 $ docker-compose exec app php artisan config:cache
 $ docker-compose exec app composer create-project laravel/laravel example-app
+$ docker-compose exec app php artisan make:controller <Name>
+$ mysql -u root -p
+$ GRANT ALL ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
+$ docker-compose exec app php artisan migrate
 
 ```
