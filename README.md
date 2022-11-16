@@ -77,6 +77,6 @@ $ docker-compose build --no-cache
 $ docker-compose up -d
 $ docker-compose exec app php artisan key:generate
 $ docker-compose exec app php artisan config:cache
-$  docker-compose exec app composer create-project laravel/laravel example-app
+$ docker-compose exec app composer create-project laravel/laravel example-app
 
 ```
