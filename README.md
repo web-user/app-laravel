@@ -82,5 +82,8 @@ $ docker-compose exec app php artisan make:controller <Name>
 $ mysql -u root -p
 $ GRANT ALL ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
 $ docker-compose exec app php artisan migrate
+$ docker-compose exec app php artisan make:test UserTest
+$ docker-compose exec app php artisan make:test UserTest --unit
+$ docker-compose exec app php artisan test
 
 ```
