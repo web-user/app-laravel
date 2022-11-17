@@ -17,4 +17,6 @@ Route::get('/', function () {
     return 'heLLO WORLD';
 });
 
-Route::get('test/{id}', 'App\Http\Controllers\MyPlaceController@index');
+// Route::get('post/{id}', 'App\Http\Controllers\MyPlaceController@index');
+
+Route::get('posts/{id}', 'App\Http\Controllers\PostController@index');
