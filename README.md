@@ -85,5 +85,8 @@ $ docker-compose exec app php artisan migrate
 $ docker-compose exec app php artisan make:test UserTest
 $ docker-compose exec app php artisan make:test UserTest --unit
 $ docker-compose exec app php artisan test
+$ docker-compose exec app php artisan make:resource V1/InvoiceResource
+
+$ http://localhost/api/v1/customers?postalCode[gt]=30000&type[eq]=I // filter
 
 ```
