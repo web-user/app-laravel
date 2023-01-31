@@ -75,17 +75,22 @@ $ docker run --rm -v $(pwd):/app composer install
 $ sudo chown -R $USER:$USER ~/laravel-app
 $ docker-compose build --no-cache
 $ docker-compose up -d
+$ docker-compose exec app php artisan route:list
 $ docker-compose exec app php artisan key:generate
 $ docker-compose exec app php artisan config:cache
 $ docker-compose exec app composer create-project laravel/laravel example-app
 $ docker-compose exec app php artisan make:controller <Name>
-$ mysql -u root -p
+$ docker-compose exec app php artisan make:controller Api/V1/PostsController --resource
+$ docker-compose exec db bash
+$ mysql -u root -p 'password for root from .env'
 $ GRANT ALL ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
 $ docker-compose exec app php artisan migrate
 $ docker-compose exec app php artisan make:test UserTest
 $ docker-compose exec app php artisan make:test UserTest --unit
 $ docker-compose exec app php artisan test
+$ docker-compose exec app php artisan migrate:fresh --seed
 $ docker-compose exec app php artisan make:resource V1/InvoiceResource
+
 
 $ http://localhost/api/v1/customers?postalCode[gt]=30000&type[eq]=I // filter
 
